@@ -1,0 +1,54 @@
+#include "reg24le1.h"
+#include "gpio.h"
+#include "rf.h"
+
+#define PINS_COUNT 16
+
+gpio_pin_id_t pins[] = {
+	GPIO_PIN_ID_P0_0,
+	GPIO_PIN_ID_P0_1,
+	GPIO_PIN_ID_P0_2,
+	GPIO_PIN_ID_P0_3,
+	GPIO_PIN_ID_P0_4,
+	GPIO_PIN_ID_P0_5,
+	GPIO_PIN_ID_P0_6,
+	GPIO_PIN_ID_P0_7,
+
+	GPIO_PIN_ID_P1_0,
+	GPIO_PIN_ID_P1_1,
+	GPIO_PIN_ID_P1_2,
+	GPIO_PIN_ID_P1_3,
+	GPIO_PIN_ID_P1_4,
+	GPIO_PIN_ID_P1_5,
+	GPIO_PIN_ID_P1_6,
+	GPIO_PIN_ID_P1_7
+};
+
+void setup(void)
+{
+	for (uint8_t i = 0; i < PINS_COUNT; i++)
+	{
+		gpio_pin_configure(pins[i],
+						GPIO_PIN_CONFIG_OPTION_DIR_OUTPUT |
+						GPIO_PIN_CONFIG_OPTION_OUTPUT_VAL_CLEAR |
+						GPIO_PIN_CONFIG_OPTION_PIN_MODE_OUTPUT_BUFFER_NORMAL_DRIVE_STRENGTH
+		);
+	}
+}
+
+uint8_t state = 0;
+
+void loop()
+{
+	uint8_t i = state++ % PINS_COUNT;
+	gpio_pin_val_set(pins[i]);
+	delay_ms(250);
+	gpio_pin_val_clear(pins[i]);
+}
+
+void main()
+{
+	setup();
+	while (1)
+		loop();
+}

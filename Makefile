@@ -3,7 +3,7 @@
 # Make file for compiling nRF24LE1 applications using SDCC and nRF24LE1_SDK
 
 # Specify the target device pin package. Options are 24, 32, or 48
-PINS := 24
+PINS := 32
 
 TARGETNAME := _target_sdcc_nrf24le1_$(PINS)
 
@@ -27,9 +27,9 @@ TAIL = tail
 STTY = stty
 # Configuration of serial port to work with Arduino
 STTYOPTIONS = 10:0:18b1:0:3:1c:7f:15:4:0:0:0:11:13:1a:0:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
-TTYPORT = /dev/ttyACM0
+TTYPORT = /dev/ttyUSB0
 # Location of programmer.pl script to use with the Arduino programmer sketch
-PROGRAMMER = ~/projects/arduino/sketches/nRF24LE1/Programmer/Programmer/Programmer.pl
+PROGRAMMER = ~/dev/__my/nRF24LE1_Programmer/Programmer/Programmer.pl
 
 # Programs to use for creating dependencies, compiling source files, and creating the library file, respectively
 DEP = sdcc
@@ -119,5 +119,3 @@ clean:
 	$(if $(OBJDIR),$(RM) -rf $(OBJDIR)/*)
 	$(if $(DEPDIR),$(RM) -rf $(DEPDIR)/*)
 	$(if $(FLASHDIR),$(RM) -rf $(FLASHDIR)/*)
-
-
