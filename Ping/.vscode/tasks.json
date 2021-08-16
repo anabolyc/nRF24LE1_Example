@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make all",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "upload",
+            "type": "shell",
+            "command": "make upload",
+            "problemMatcher": []
+        },
+        {
+            "label": "upload and monitor",
+            "type": "shell",
+            "command": "make upload && screen /dev/ttyUSB0 57600",
+            "problemMatcher": []
+        },
+        {
+            "label": "monitor",
+            "type": "shell",
+            "command": "screen /dev/ttyUSB0 19200",
+            "problemMatcher": []
+        }
+    ]
+}
