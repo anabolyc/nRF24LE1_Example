@@ -15,3 +15,5 @@
 *.omf
 
 **/.directory
+
+obj

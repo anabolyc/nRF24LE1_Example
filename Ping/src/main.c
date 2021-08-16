@@ -9,6 +9,7 @@
 #include "reg24le1.h"
 #include "gpio.h"
 #include "rf.h"
+#include "uart.h"
 
 void main(){
 	unsigned char datavar; //register to data sent and received
