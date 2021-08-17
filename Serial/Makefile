@@ -29,7 +29,7 @@ STTY = stty
 STTYOPTIONS = 10:0:18b1:0:3:1c:7f:15:4:0:0:0:11:13:1a:0:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
 TTYPORT = /dev/ttyUSB0
 # Location of programmer.pl script to use with the Arduino programmer sketch
-PROGRAMMER = ../../Programmer/Programmer.pl
+PROGRAMMER = ../../Programmer/Programmer/Programmer.pl
 
 # Programs to use for creating dependencies, compiling source files, and creating the library file, respectively
 DEP = sdcc
