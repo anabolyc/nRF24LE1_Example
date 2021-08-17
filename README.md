@@ -1,5 +1,9 @@
-nRF24LE1_Example
-================
+# nRF24LE1 Examples
+
+More information can be found in [nRF24LE1_Starter_Kit](https://github.com/anabolyc/nRF24LE1_Starter_Kit) repo.
+
+
+## How to build
 
 This is an example application for the [nRF24LE1](http://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRF24LE1) using [SDCC](http://sdcc.sourceforge.net/) and the [nRF24LE1_SDK](https://github.com/DeanCording/nRF24LE1_SDK).
 
@@ -11,4 +15,4 @@ It is assumed that the nRF24LE1_SDK directory is in the same working directory a
 
 To build your application, type 'make all'.  The compiled hex file will be located in the _flash_ directory.
 
-Applications can be loaded onto the nRF24LE1 using the Arduino based [programmer](https://github.com/DeanCording/nRF24LE1_Programmer) by typing 'make upload'.
+Applications can be loaded onto the nRF24LE1 using the Arduino based [programmer](https://github.com/DeanCording/nRF24LE1_Programmer) by typing `make upload`.
