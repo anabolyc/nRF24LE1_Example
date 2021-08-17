@@ -17,3 +17,5 @@
 **/.directory
 
 obj
+dep
+flash

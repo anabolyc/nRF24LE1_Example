@@ -28,7 +28,7 @@
         {
             "label": "monitor",
             "type": "shell",
-            "command": "screen /dev/ttyUSB0 19200",
+            "command": "screen /dev/ttyUSB0 57600",
             "problemMatcher": []
         }
     ]

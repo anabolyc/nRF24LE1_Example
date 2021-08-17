@@ -9,8 +9,8 @@ TARGETNAME := _target_sdcc_nrf24le1_$(PINS)
 
 # Add include directories (outside this folder) that make needs to know about (separated by a space)
 # These MUST be the relative path from within this directory to the desired directory (no absolute paths)
-export EXTERNINCDIRS = ../nRF24LE1_SDK/$(TARGETNAME)/include ../nRF24LE1_SDK/include
-export EXTERNLIBDIRS = ../nRF24LE1_SDK/$(TARGETNAME)/lib
+export EXTERNINCDIRS = ../../SDK/$(TARGETNAME)/include ../../SDK/include
+export EXTERNLIBDIRS = ../../SDK/$(TARGETNAME)/lib
 
 # Functions needed by this makefile
 ECHO = @echo
@@ -29,7 +29,7 @@ STTY = stty
 STTYOPTIONS = 10:0:18b1:0:3:1c:7f:15:4:0:0:0:11:13:1a:0:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
 TTYPORT = /dev/ttyUSB0
 # Location of programmer.pl script to use with the Arduino programmer sketch
-PROGRAMMER = ~/dev/__my/nRF24LE1_Programmer/Programmer/Programmer.pl
+PROGRAMMER = ../../Programmer/Programmer/Programmer.pl
 
 # Programs to use for creating dependencies, compiling source files, and creating the library file, respectively
 DEP = sdcc
